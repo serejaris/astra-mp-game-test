@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111219">
+  <meta name="description" content="Rift Brawl — магическая арена с видом сверху. Открывай комнату, приглашай друзей и побеждай в дуэлях заклинаний.">
+  <title>Rift Brawl — Лунные руины</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 44 44"><path fill="#a784ff" d="m3 29 8-16 11-4-5 13z"/><path fill="#e3d4ff" d="m11 36 10-22L40 3l-8 21-10 5 4-11-6 6z"/><path fill="#8555fd" d="m26 32 8-5-3 9-12 6z"/></symbol>
+  <symbol id="swords" viewBox="0 0 24 24"><path d="m4 3 4 1 10 11-3 3L4 7zM14 17l5 5m-4-2 6-6M14 8l4-4 3-1-1 4-4 4M3 15l6 6m-5 0 6-6"/></symbol>
+  <symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.6 2.6 0 0 1 5 1c0 1.7-2.5 2.1-2.5 4m0 2.5h.01"/></symbol>
+  <symbol id="volume" viewBox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4zM15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/></symbol>
+  <symbol id="mute" viewBox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4zM16 10l5 5m0-5-5 5"/></symbol>
+  <symbol id="people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 4v2"/></symbol>
+  <symbol id="invite" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M2 19v-1a6 6 0 0 1 12 0v1m5-10v6m-3-3h6"/></symbol>
+  <symbol id="link" viewBox="0 0 24 24"><path d="m10 13 4-4m-5 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m1 4 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 0)"/></symbol>
+  <symbol id="hash" viewBox="0 0 24 24"><path d="M10 3 7 21m10-18-3 18M4 8h16M3 16h16"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="expand" viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></symbol>
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M20 5.5c-2.5-2-5.8-1.1-8 1.5-2.2-2.6-5.5-3.5-8-1.5-5.2 4.3-.4 9.6 8 15 8.4-5.4 13.2-10.7 8-15z"/></symbol>
+  <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 2v5m0 10v5M2 12h5m10 0h5"/></symbol>
+  <symbol id="bolt-icon" viewBox="0 0 24 24"><path d="m14 2-10 12h7l-2 8L21 9h-8z"/></symbol>
+  <symbol id="trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0zM7 5H3v2a4 4 0 0 0 4 4m10-6h4v2a4 4 0 0 1-4 4m-5 3v5m-4 2h8"/></symbol>
+  <symbol id="keys" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h.1m4 0h.1m4 0h.1m4 0h.1M6 12h.1m4 0h.1m4 0h.1m4 0h.1M8 15h8"/></symbol>
+  <symbol id="mouse" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v8M6 10h12"/></symbol>
+  <symbol id="signal" viewBox="0 0 24 24"><path d="M3 20v-3m5 3v-7m5 7V9m5 11V4"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+  <symbol id="pencil" viewBox="0 0 24 24"><path d="m3 17 12-12 4 4L7 21H3zm11-11 4 4m-2-6 2-2 4 4-2 2"/></symbol>
+  <symbol id="chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+</svg>
+<header class="topbar"><div class="topbar-inner">
+  <div class="brand" aria-label="Rift Brawl"><svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg><span>RIFT<span class="brand-second">BRAWL</span></span></div>
+  <nav aria-label="Игра"><span class="nav-active"><svg class="icon"><use href="#swords"/></svg>Арена</span><button id="help-open" class="nav-help"><svg class="icon"><use href="#help"/></svg><span>Как играть</span></button></nav>
+  <div class="account-tools"><button class="icon-button" data-game-action="sound" id="sound" aria-label="Включить звук" title="Звук"><svg class="icon"><use href="#mute"/></svg></button><i class="divider"></i><button id="profile-open" class="account" aria-label="Изменить имя мага" title="Изменить имя мага"><span class="avatar small"><img src="/assets/mage.webp" alt=""></span><span id="account-name">Маг</span><svg class="icon small-edit"><use href="#pencil"/></svg></button></div>
+</div></header>
+<main>
+  <header class="room-heading">
+    <div class="title-group"><p class="section-label"><span class="slash">///</span> МАГИЧЕСКАЯ АРЕНА</p><h1>Лунные руины</h1><p class="subtitle"><svg class="icon"><use href="#swords"/></svg>Каждый за себя<span class="sep-dot"></span><svg class="icon"><use href="#people"/></svg>До 8 игроков</p></div>
+    <div class="room-actions"><span class="room-code"><svg class="icon"><use href="#hash"/></svg><span><small>КОМНАТА</small><strong id="room-code">······</strong></span></span><button class="invite" data-game-action="copy"><svg class="icon"><use href="#invite"/></svg>Пригласить друга</button></div>
+  </header>
+  <div class="game-grid">
+    <div class="play-column">
+      <section id="play-panel" class="play-panel" aria-label="Игровое поле">
+        <div class="canvas-wrap">
+          <canvas id="arena" tabindex="0" aria-label="Лунные руины, игровое поле"></canvas>
+          <div class="arena-hud"><span class="phase-chip"><i></i><span id="phase-label">Подключение</span></span><span class="clock-chip"><svg class="icon"><use href="#clock"/></svg><span id="timer">––:––</span></span><button class="expand" id="fullscreen" aria-label="Развернуть поле" title="Развернуть поле"><svg class="icon"><use href="#expand"/></svg></button></div>
+          <div class="fullscreen-spells" aria-label="Заклинания"><button data-full-spell="nova" aria-label="Сверхновая"><span class="spell-art nova"></span></button><button data-full-spell="blink" aria-label="Скачок"><span class="spell-art blink"></span></button></div>
+          <div id="match-overlay" class="match-overlay" hidden><div><p class="section-label" id="overlay-label"></p><strong id="overlay-title"></strong><span id="overlay-detail"></span></div></div>
+        </div>
+        <div class="vitals"><div class="player-ident"><span class="avatar"><img src="/assets/mage.webp" alt=""></span><span><small>ВАШ МАГ</small><strong id="my-name">Маг</strong></span></div>
+        <div class="hp"><span class="hp-label"><svg class="icon"><use href="#heart"/></svg>Здоровье</span><div class="hp-read"><span class="hp-track"><i id="hp-fill"></i></span><strong><span id="hp-num">100</span><small> / 100</small></strong></div></div>
+        <div class="kos"><svg class="icon"><use href="#target"/></svg><span><small>НОКАУТЫ</small><strong id="my-kills">0</strong></span></div></div>
+      </section>
+      <div class="control-strip"><span class="control-title"><svg class="icon"><use href="#keys"/></svg>Управление</span><div class="desktop-controls"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> движение</span><span><svg class="icon"><use href="#mouse"/></svg> прицел</span><span><kbd>ЛКМ</kbd> выстрел</span></div><div class="touch-controls">Слева — движение, справа — огонь</div></div>
+    </div>
+    <aside>
+      <section class="side-card spell-card"><header class="card-title"><span class="title-icon violet"><svg class="icon"><use href="#bolt-icon"/></svg></span><h2>Заклинания</h2></header>
+        <div class="spell-list">
+          <button class="spell" data-cast="bolt"><span class="spell-art bolt"></span><span class="spell-copy"><strong>Арканный болт</strong><small>Выстрел по прицелу</small></span><kbd>ЛКМ</kbd><i class="cooldown"></i></button>
+          <button class="spell" data-cast="nova"><span class="spell-art nova"></span><span class="spell-copy"><strong>Сверхновая</strong><small>Взрыв вокруг мага</small></span><kbd>Q</kbd><i class="cooldown"></i></button>
+          <button class="spell" data-cast="blink"><span class="spell-art blink"></span><span class="spell-copy"><strong>Скачок</strong><small>Рывок к прицелу</small></span><kbd>E</kbd><i class="cooldown"></i></button>
+        </div>
+      </section>
+      <section class="side-card fighters-card"><header class="card-title"><span class="title-icon amber"><svg class="icon"><use href="#trophy"/></svg></span><h2>Бойцы</h2><span id="fighters-count" class="count">0 / 8</span></header>
+        <div class="list-head"><span>ИГРОК</span><span>НОКАУТЫ</span></div><ol id="fighters"></ol><p id="practice-note" class="practice-note" hidden>На разминке играет бот. Друг займёт его место, когда войдёт.</p>
+      </section>
+    </aside>
+  </div>
+  <footer><span class="footer-brand">RIFT BRAWL</span><span class="network"><i id="network-dot"></i><span id="network-label">Подключение</span><span class="ping" id="ping"></span></span></footer>
+</main>
+<dialog id="help-dialog"><button class="dialog-x" aria-label="Закрыть"><svg class="icon"><use href="#close"/></svg></button><p class="section-label"><span class="slash">///</span> RIFT BRAWL</p><h2>Как играть</h2><p>За каждый нокаут соперника ты получаешь очко. Побеждает тот, кто за три минуты набрал больше очков.</p><ul class="help-list"><li><kbd>W A S D</kbd><span>Двигайся по арене. Стрелки тоже работают.</span></li><li><kbd>ЛКМ</kbd><span>Наведи мышь и стреляй арканным болтом. Удерживай для серии выстрелов.</span></li><li><kbd>Q</kbd><span>Взорви сверхновую, когда соперник рядом.</span></li><li><kbd>E</kbd><span>Сделай скачок в сторону прицела.</span></li></ul><p>На телефоне двигайся левым пальцем и целись правым. Заклинания доступны под полем.</p><button class="invite dialog-done">В бой</button></dialog>
+<dialog id="profile-dialog"><button class="dialog-x" aria-label="Закрыть"><svg class="icon"><use href="#close"/></svg></button><p class="section-label"><span class="slash">///</span> RIFT BRAWL</p><h2>Имя мага</h2><form id="name-form"><label for="name-input">Так тебя увидят другие бойцы</label><input id="name-input" required maxlength="20" autocomplete="off"><button class="invite" type="submit">Сохранить</button></form></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module" src="/ui.js"></script><script type="module" src="/game.js"></script>
+</body></html>
