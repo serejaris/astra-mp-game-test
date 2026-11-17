@@ -151,9 +151,9 @@ dialog p:not(.section-label),dialog label { display:block; color:#c6c2d0; font-s
 .help-list kbd { min-width:58px }
 dialog input { width:100%; border:1px solid #4a4555; background:#171720; border-radius:7px; padding:12px; color:var(--text); margin:10px 0 16px }
 .toast { position:fixed; z-index:10; bottom:24px; left:50%; transform:translateX(-50%); background:#2d2c38; border:1px solid #645771; border-radius:8px; box-shadow:0 3px 22px #0006; padding:12px 16px; color:#efedf7; font-size:13px; max-width:90vw; text-align:center }
-.play-panel:fullscreen { display:flex; align-items:center; justify-content:center; background:#101116; border:0; border-radius:0; flex-direction:column }
-.play-panel:fullscreen .canvas-wrap { width:min(100vw,calc((100dvh - 67px) * 1.6)); flex:none }
-.play-panel:fullscreen .vitals { width:min(100vw,calc((100dvh - 67px) * 1.6)); flex:none }
+.play-panel:is(:fullscreen,.expanded) { display:flex; align-items:center; justify-content:center; background:#101116; border:0; border-radius:0; flex-direction:column }
+.play-panel:is(:fullscreen,.expanded) .canvas-wrap { width:min(100vw,calc((100dvh - 67px) * 1.6)); flex:none }
+.play-panel:is(:fullscreen,.expanded) .vitals { width:min(100vw,calc((100dvh - 67px) * 1.6)); flex:none }
 @media(min-width:1500px) { .room-heading { margin-top:40px; margin-bottom:28px } }
 @media(max-width:1100px) {
   .topbar-inner,main { width:calc(100% - 48px) }
@@ -242,7 +242,7 @@ dialog input { width:100%; border:1px solid #4a4555; background:#171720; border-
 
 .fullscreen-spells { display:none }
 @media(pointer:coarse) {
-  .play-panel:fullscreen .fullscreen-spells { position:absolute; right:10px; bottom:10px; display:flex; gap:7px }
+  .play-panel:is(:fullscreen,.expanded) .fullscreen-spells { position:absolute; right:10px; bottom:10px; display:flex; gap:7px }
   .fullscreen-spells button { border:1px solid #9485a9; border-radius:8px; padding:2px; background:#211f2b }
   .fullscreen-spells .spell-art { width:36px; height:36px }
 }
@@ -253,3 +253,6 @@ dialog input { width:100%; border:1px solid #4a4555; background:#171720; border-
   .control-strip { margin-top:8px; padding:8px 13px; min-height:36px }
   footer { margin-top:10px; padding-top:8px }
 }
+
+body.field-expanded { overflow:hidden }
+.play-panel.expanded { position:fixed; inset:0; z-index:8 }

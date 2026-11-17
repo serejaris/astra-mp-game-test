@@ -142,15 +142,28 @@ for (const button of document.querySelectorAll('[data-full-spell]')) {
   button.addEventListener('click', () => spellButtons.get(button.dataset.fullSpell).click())
 }
 const fullscreen = byId('fullscreen')
-fullscreen.hidden = !document.fullscreenEnabled
-fullscreen.addEventListener('click', async () => {
-  try {
-    if (document.fullscreenElement) await document.exitFullscreen()
-    else await panel.requestFullscreen()
-  } catch { showToast('Браузер не смог развернуть поле.') }
-})
-document.addEventListener('fullscreenchange', () => {
-  const active = Boolean(document.fullscreenElement)
+function updateFullscreen(active) {
   fullscreen.setAttribute('aria-label', active ? 'Свернуть поле' : 'Развернуть поле')
+  fullscreen.title = fullscreen.getAttribute('aria-label')
   fullscreen.setAttribute('aria-pressed', String(active))
+}
+function expandInPage(active) {
+  panel.classList.toggle('expanded', active)
+  document.body.classList.toggle('field-expanded', active)
+  updateFullscreen(active)
+}
+fullscreen.addEventListener('click', async () => {
+  if (panel.classList.contains('expanded')) return expandInPage(false)
+  if (document.fullscreenElement) return document.exitFullscreen()
+  if (document.fullscreenEnabled) {
+    try {
+      await panel.requestFullscreen()
+      return
+    } catch {}
+  }
+  expandInPage(true)
+})
+document.addEventListener('fullscreenchange', () => updateFullscreen(Boolean(document.fullscreenElement)))
+window.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && panel.classList.contains('expanded')) expandInPage(false)
 })
